@@ -15,6 +15,7 @@
 
 	<button onclick="greeting()">Check Access</button>
 	<button onclick="changeHeader()">Change Header</button>
+	<button onclick="changeColor()">Change Color</button>
 
 
 	<p class="greenText">This is a paragraph.</p>
@@ -97,6 +98,14 @@
 			header.innerText = "This is a Changed Main Heading";
 			header.style.color = "red";
 			header.style.backgroundColor = "black";
+		}
+
+		function changeColor() {
+			const elements = document.querySelectorAll(".normalText");
+			console.log(elements);
+			elements.forEach(element => {
+				element.style.color = "orange";
+			});
 		}
 		
 		// const btn = document.getElementById("accBtn");
