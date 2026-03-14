@@ -1,0 +1,77 @@
+body {
+	background-color: #e4ffe4;
+}
+p {
+	color: red;
+}
+
+p.normalText , #mainHeader{
+	border: 1px solid blue;
+}
+
+#mainHeader {
+	color: Blue;
+	padding: 5px;
+	border: 3px solid blue;
+}
+
+.greenText {
+	color: green;
+}
+	
+td, th {
+	background-color: lime;
+}
+
+ol ol {
+	background-color: yellow;
+}
+
+.flex {
+	display: flex;
+	border: 1px solid red;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100px;
+}
+
+.grid {
+	display: grid;
+    align-content: end;
+    justify-content: end;
+    align-items: end;
+    justify-items: end;
+}
+
+.flex div, .grid div {
+	border: 1px solid black;
+	padding: 5px;
+	margin: 3px;
+	height: 25px;
+	animation-name: myAnimation;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes myAnimation {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}
+
+.flex div:hover {
+	background-color: white;
+	cursor: hand;
+	transform: scale(1.5);
+	transition: all 180ms ease-in-out;
+	border-radius: 10px;
+}
+
+
+@media (max-width: 300px) {
+  .flex {
+    flex-direction: column;
+	background-color: silver;
+  }
+}

@@ -1,0 +1,107 @@
+<html>
+
+<head>
+	<title>Page Title</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<h1 id="mainHeader">This is Main Heading</h1>
+	<p id="mainPara1">Go to
+		<a href="./test/about.html">About Page.</a>
+	</p>
+	
+	<input type="text" placeholder="Enter your name" id="nameInput" onkeydown="greeting2(event)"/>
+
+	<button onclick="greeting()">Check Access</button>
+	<button onclick="changeHeader()">Change Header</button>
+
+
+	<p class="greenText">This is a paragraph.</p>
+	<p class="greenText">This is a paragraph.</p>
+	<p class="normalText">This is a paragraph.</p>
+	<p class="normalText">This is a paragraph.</p>
+	<p class="normalText">This is a paragraph.</p>
+	<p class="normalText">This is a paragraph.</p>
+
+	<h1 class="greenText normalText">This is a Heading for Image</h1>
+	<img src="https://hips.hearstapps.com/hmg-prod/images/a251688-large-68f66781475e7.jpg?crop=0.609xw:0.559xh;0.0646xw,0.298xh"
+		alt="this is car image" width="400px" />
+
+	<img src="./car.jpg" alt="this is car image" width="400px" />
+
+	<video width="400px" controls>
+		<source src="./sample.mp4" type="video/mp4" />
+	</video>
+
+
+	<div>
+		this is a div tag. <span>this is a span.</span>
+	</div>
+	<ul type="square">
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+	</ul>
+	<ol>
+		<li>Coffee</li>
+		<li>Tea</li>
+
+		<ol type="a">
+			<li>Ceylon Tea</li>
+			<li>Green Tea</li>
+		</ol>
+
+		<li>Milk</li>
+	</ol>
+
+	<table style="border: 1px solid rgb(219, 41, 41)">
+		<thead>
+			<tr>
+				<th style="border: 1px solid black">Company</th>
+				<th style="border: 1px solid black">Contact</th>
+				<th colspan="2" style="border: 1px solid black">Country</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td style="border: 1px solid black">Alfreds Futterkiste</td>
+				<td style="border: 1px solid black">Maria Anders</td>
+				<td rowspan="2" style="border: 1px solid black">Germany</td>
+				<td style="border: 1px solid black">+945</td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid black">Centro comercial Moctezuma</td>
+				<td style="border: 1px solid black">Francisco Chang</td>
+				<td style="border: 1px solid black">+956</td>
+			</tr>
+		</tbody>
+	</table>
+	
+
+	<script>
+		function greeting() {
+			const nameInput = document.getElementById("nameInput");
+			name = nameInput.value;
+			return alert('Guardian Access Granted for ' + name + ' ..!');
+		}
+
+		function greeting2(event) {
+			if (event.key === "Enter") {
+				greeting();
+			}
+		}
+
+		function changeHeader() {
+			const header = document.getElementById("mainHeader");
+			header.innerText = "This is a Changed Main Heading";
+			header.style.color = "red";
+			header.style.backgroundColor = "black";
+		}
+		
+		// const btn = document.getElementById("accBtn");
+		// btn.addEventListener("click", greeting("Kandy"));
+	</script>
+</body>
+
+</html>
